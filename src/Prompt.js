@@ -144,7 +144,7 @@ export default class Prompt extends Component {
 
   render() {
     return (
-      <Modal onRequestClose={() => this.close()} transparent={true} visible={this.props.visible}>
+      <Modal supportedOrientations={['portrait', 'landscape']} onRequestClose={() => this.close()} transparent={true} visible={this.props.visible}>
         {this._renderDialog()}
       </Modal>
     );
