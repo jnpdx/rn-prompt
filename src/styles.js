@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   dialog: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   dialogOverlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
@@ -11,11 +12,11 @@ export default StyleSheet.create({
     top: 0,
     bottom: 0,
     left: 0,
-    right: 0
+    right: 0,
   },
   dialogContent: {
     elevation: 5,
-    marginTop: 150,
+    //marginTop: 150,
     width: 300,
     backgroundColor: 'white',
     borderRadius: 5,
