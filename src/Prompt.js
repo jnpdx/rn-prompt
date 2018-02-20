@@ -6,7 +6,8 @@ import {
   Text,
   TextInput,
   TouchableWithoutFeedback,
-  View
+  View,
+  KeyboardAvoidingView
 } from 'react-native';
 import styles from './styles';
 
@@ -103,9 +104,9 @@ export default class Prompt extends Component {
       inputStyle
     } = this.props;
     return (
-      <View style={styles.dialog} key="prompt">
+      <View behavior='position' style={styles.dialog} key="prompt">
         <View style={styles.dialogOverlay}/>
-        <View style={[styles.dialogContent, { borderColor }, promptStyle]}>
+        <KeyboardAvoidingView behavior='position' contentContainerStyle={[styles.dialogContent, { borderColor }, promptStyle]}>
           <View style={[styles.dialogTitle, { borderColor }]}>
             <Text style={[styles.dialogTitleText, titleStyle]}>
               { title }
@@ -137,7 +138,7 @@ export default class Prompt extends Component {
               </View>
             </TouchableWithoutFeedback>
           </View>
-        </View>
+        </KeyboardAvoidingView>
       </View>
     );
   };
